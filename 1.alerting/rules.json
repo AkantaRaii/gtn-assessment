@@ -1,0 +1,7 @@
+{
+  "patterns": [
+    "failed login",
+    "unauthorized access",
+    "malicious activity detected"
+  ]
+}
