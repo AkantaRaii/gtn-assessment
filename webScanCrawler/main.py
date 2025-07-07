@@ -53,7 +53,7 @@ def list_all_links(soup, base_url):
     links = []
     for link in soup.find_all('a', href=True):
         href = link['href']
-        full_url = urljoin(base_url, href)
+        full_url = urljoin(base_url, href)          # handles relative URLs by joining them with the base URL
         if not href or href.startswith("mailto:") or href.startswith("javascript:"):    # i realised that href might be empty or might be a 
             continue                                                                    # mailto or javascript link so 
         if full_url not in visited_urls and same_domain(full_url):                      #i need to check if 
